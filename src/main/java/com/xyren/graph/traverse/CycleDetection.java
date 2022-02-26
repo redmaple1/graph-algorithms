@@ -8,7 +8,7 @@ import com.xyren.graph.Graph;
  * @author renxiaoya
  * @date 2022-02-24
  **/
-public class CircleDetection {
+public class CycleDetection {
     private Graph G;
 
     private boolean[] visited;
@@ -17,7 +17,7 @@ public class CircleDetection {
      */
     private boolean hasCircle;
 
-    public CircleDetection(Graph G) {
+    public CycleDetection(Graph G) {
         this.G = G;
 
         visited = new boolean[G.V()];
@@ -52,11 +52,11 @@ public class CircleDetection {
 
     public static void main(String[] args) {
         Graph graph1 = new Graph("d.txt");
-        CircleDetection circleDetection1 = new CircleDetection(graph1);
-        System.out.println(circleDetection1.hasCircle());
+        CycleDetection cycleDetection1 = new CycleDetection(graph1);
+        System.out.println(cycleDetection1.hasCircle());
 
         Graph graph2 = new Graph("d2.txt");
-        CircleDetection circleDetection2 = new CircleDetection(graph2);
-        System.out.println(circleDetection2.hasCircle());
+        CycleDetection cycleDetection2 = new CycleDetection(graph2);
+        System.out.println(cycleDetection2.hasCircle());
     }
 }
